@@ -110,14 +110,20 @@
 </nav>
       
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-iOS基础/影响Viewcontroller展示的一些属性" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/01/01/hello-world/" class="article-date">
-  	<time datetime="2015-01-01T10:11:55.000Z" itemprop="datePublished">Jan 1 2015</time>
+      <a href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/" class="article-date">
+  	<time datetime="2015-01-01T10:34:14.000Z" itemprop="datePublished">Jan 1 2015</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+  </div>
+
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -126,7 +132,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/01/hello-world/">Hello World</a>
+      <a class="article-title" href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/">影响Viewcontroller展示的一些属性</a>
     </h1>
   
 
@@ -134,25 +140,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+        <p>在适配 iOS7 之前的 view 的时候，我们写过这样的代码</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">self</span><span class="built_in">.</span>automaticallyAdjustsScrollViewInsets <span class="subst">=</span> <span class="literal">false</span></div><div class="line"><span class="built_in">self</span><span class="built_in">.</span>edgesForExtendedLayout <span class="subst">=</span> UIRectEdge<span class="built_in">.</span><span class="literal">None</span></div><div class="line"><span class="built_in">self</span><span class="built_in">.</span>extendedLayoutIncludesOpaqueBars <span class="subst">=</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/#more">阅读全文 >></a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
