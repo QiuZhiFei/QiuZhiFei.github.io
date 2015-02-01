@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iPhone适配Plus的一些思考 | 仇志飞的博客 | iOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="适配plus, iOS适配, iPhone适配">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iPhone适配Plus的一些思考">
+<meta property="og:url" content="http://yoursite.com/2015/02/01/iOS基础/iPhone适配Plus的一些思考/">
+<meta property="og:site_name" content="仇志飞的博客 | iOS">
+<meta property="og:description" content="适配plus, iOS适配, iPhone适配">
+<meta property="og:image" content="http://zhifei.qiniudn.com/pt.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iPhone适配Plus的一些思考">
+<meta name="twitter:description" content="适配plus, iOS适配, iPhone适配">
+
+  
+    <link rel="alternative" href="/atom.xml" title="仇志飞的博客 | iOS" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="http://zhifei.qiniudn.com/bb7a3a8a2f704f938058210d82d0bc17e1a3bdb3585d5-faSzte_fw658.png?imageView2/2/w/200/q/85">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">仇志飞</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我只想做个安静的 iOS 开发 ...</p>
+		
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+				<li><a href="/categories/iOS基础">iOS基础</a></li>
+	        
+				<li><a href="/categories/第三方">第三方使用</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/QiuZhiFei" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/qiuzhifei521" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+		        
+			</div>
+		</nav>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://zhifei.qiniudn.com/bb7a3a8a2f704f938058210d82d0bc17e1a3bdb3585d5-faSzte_fw658.png?imageView2/2/w/200/q/85">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">仇志飞</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我只想做个安静的 iOS 开发 ...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/iOS基础">iOS基础</a></li>
+		        
+					<li><a href="/categories/第三方">第三方使用</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/QiuZhiFei" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/qiuzhifei521" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-iOS基础/iPhone适配Plus的一些思考" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考/" class="article-date">
+  	<time datetime="2015-02-01T10:34:14.000Z" itemprop="datePublished">Feb 1 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iPhone适配Plus的一些思考
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th>~</th>
+<th>plus</th>
+<th>5s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>屏幕尺寸</td>
+<td>5.5 寸 736 * 414</td>
+<td>4寸 568 * 320</td>
+</tr>
+<tr>
+<td>宽高比例</td>
+<td>16 * 9</td>
+<td>16 * 9</td>
+</tr>
+<tr>
+<td>分辨率(px)</td>
+<td>2208 * 1242</td>
+<td>1136 * 640</td>
+</tr>
+<tr>
+<td>密度(density)（公式 分辨率/屏幕尺寸）</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>dpi 每英寸像素数 (公式（√（横向分辨率^2+纵向分辨率^2））/屏幕尺寸）)</td>
+<td>401</td>
+<td>326 </td>
+</tr>
+<tr>
+<td>dip 设备独立像素 dip = px / density</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pt(点，point)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+
+<h1 id="Android">Android</h1>
+<p>在Android开发中多用到dip做坐标，</p>
+<p>dip = px / density + 0.5f;<br>px = dip * density + 0.5f;</p>
+<h1 id="iOS">iOS</h1>
+<p>在iOS开发中用的就是点的概念，</p>
+<table>
+<thead>
+<tr>
+<th>~</th>
+<th>plus</th>
+<th>5s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分辨率</td>
+<td>2208px * 1242px</td>
+<td>1136px * 640px</td>
+</tr>
+<tr>
+<td>size</td>
+<td>736pt * 414pt</td>
+<td>568pt * 320pt</td>
+</tr>
+<tr>
+<td>密度</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>我觉得这个pt的公式也应该是 </p>
+<p>pt = px / density;<br>px = pt * density;</p>
+<p>(只不过iOS现在的密度都是整数的，我们不需要加 0.5 来取整)</p>
+<h1 id="疑问">疑问</h1>
+<p><strong> 我们通过 Auto Layout 或者 Size Classes 中的相对坐标是否真的能解决适配 </strong></p>
+<p>因为我们看到</p>
+<p><img src="http://zhifei.qiniudn.com/pt.png" alt=""><br>这是一张设计图，针对中间元素，我们可以设 layout </p>
+<ul>
+<li>top = 138/2.0 pt,</li>
+<li>width == height = 234/2.0 pt</li>
+<li>居中</li>
+</ul>
+<p>但这是针对 5s 568pt <em> 320pt 的设计，我们在 736pt </em> 414pt 中同样使用这份 layout，你会发现，整个元素，距离上太近了，而元素又太小了，我们是不是应该同比例放大？</p>
+<p><strong> 公式 = 设计稿中宽的 pt / 当前屏幕的 pt * 设计稿中元素的 pt </strong></p>
+<p>以实现等比方法 .. </p>
+<p>方法有二</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="javadoc">/** 默认的屏幕宽度像素(设计稿中的像素宽度) */</span></div><div class="line">#define DefaultDevicePx <span class="number">640</span></div><div class="line"></div><div class="line"><span class="javadoc">/** 默认的像素密度(设计稿中的像素密度) */</span></div><div class="line">#define DefaultDENSITY <span class="number">2.0</span></div><div class="line"></div><div class="line"><span class="javadoc">/** 相对于默认设计的比例 */</span></div><div class="line">#define DENSITY ([UIScreen mainScreen].bounds.size.width / (DefaultDevicePx / DefaultDENSITY))</div><div class="line"></div><div class="line"><span class="javadoc">/** 传入像素，得到当前比例的 dip */</span></div><div class="line">#define DIP(px) (px / DefaultDENSITY * DENSITY)</div></pre></td></tr></table></figure>
+
+<ol>
+<li>计算出比例，改变初始化 frame </li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">UIView</span> * view = [[<span class="built_in">UIView</span> alloc] initWithFrame:CGRectMake(DIP(<span class="number">0</span>), DIP(<span class="number">0</span>), DIP(<span class="number">234</span>), DIP(<span class="number">234</span>))];</div></pre></td></tr></table></figure>
+
+<ol>
+<li>按照比例放大元素</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">view.transform </span>=<span class="string"> CGAffineTransformMakeScale(DENSITY, DENSITY);</span></div></pre></td></tr></table></figure>
+
+<p><strong> 这样布局问题就解决了，因为你所有的元素都是等比放大，你的间距也是等比放大，你的 ui 基本就是一致的没有调动 </strong></p>
+<h1 id="但是">但是</h1>
+<ol>
+<li>可以看到 storyboard 不能很好的实现这样的运算</li>
+<li>元素的size是动态放大的，切的 @2x @3x 图可能就没有这么标准了 ..</li>
+</ol>
+<h1 id="最后">最后</h1>
+<p>我还在考虑 …</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">影响Viewcontroller展示的一些属性</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="iOS基础/iPhone适配Plus的一些思考" data-title="iPhone适配Plus的一些思考" data-url="http://yoursite.com/2015/02/01/iOS基础/iPhone适配Plus的一些思考/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"qiuzhifei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 仇志飞
+    	</div>
+      	<div class="footer-right">
+        
+
+          啦拉拉 ~ 
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
