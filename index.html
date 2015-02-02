@@ -114,10 +114,68 @@
 </nav>
       
   
-    <article id="post-iOS基础/iPhone适配Plus的一些思考" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-iOS基础/iPhone适配Plus的一些思考（二）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考/" class="article-date">
+      <a href="/2015/02/02/iOS基础/iPhone适配Plus的一些思考（二）/" class="article-date">
+  	<time datetime="2015-02-02T15:34:14.000Z" itemprop="datePublished">Feb 2 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/02/iOS基础/iPhone适配Plus的一些思考（二）/">iPhone适配Plus的一些思考（二）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基本原则</p>
+<ol>
+<li>因为多数为可拉伸的线性布局，比例我们依靠宽度的比例缩放。公式 = 当前的视图的宽度dip / 设计稿中宽度的dip。比如 当前设备为 plus，设计稿为 5s的，比例 = 414 / 320。</li>
+<li>根据宽度缩放，由于 label，textview 展示每行字体的高度是不变的，所以不整体缩放。</li>
+<li>根据宽度缩放，由于 imageview 等 这种<strong>整体元素宽度缩放，高度也需要相应缩放才不变形</strong>，所以需要缩放。</li>
+</ol>
+
+        
+          <p class="article-more-link">
+            <a href="/2015/02/02/iOS基础/iPhone适配Plus的一些思考（二）/#more">阅读全文 >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-iOS基础/iPhone适配Plus的一些思考（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考（一）/" class="article-date">
   	<time datetime="2015-02-01T10:34:14.000Z" itemprop="datePublished">Feb 1 2015</time>
 </a>
       
@@ -136,7 +194,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考/">iPhone适配Plus的一些思考</a>
+      <a class="article-title" href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考（一）/">iPhone适配Plus的一些思考（一）</a>
     </h1>
   
 
@@ -193,7 +251,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考/#more">阅读全文 >></a>
+            <a href="/2015/02/01/iOS基础/iPhone适配Plus的一些思考（一）/#more">阅读全文 >></a>
           </p>
         
       
