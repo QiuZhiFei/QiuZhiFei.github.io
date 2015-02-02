@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/1 | 仇志飞的博客 | iOS</title>
+  <title>Tag: 笔记 | 仇志飞的博客 | iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="仇志飞 | blog | iOS">
 <meta property="og:type" content="website">
 <meta property="og:title" content="仇志飞的博客 | iOS">
-<meta property="og:url" content="http://yoursite.com/archives/2015/01/">
+<meta property="og:url" content="http://yoursite.com/tags/笔记/">
 <meta property="og:site_name" content="仇志飞的博客 | iOS">
 <meta property="og:description" content="仇志飞 | blog | iOS">
 <meta name="twitter:card" content="summary">
@@ -118,19 +118,19 @@
 </nav>
       
   
-    <article id="post-iOS基础/影响Viewcontroller展示的一些属性" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-notes/Layer 中自定义属性的动画" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/" class="article-date">
-  	<time datetime="2015-01-01T10:34:14.000Z" itemprop="datePublished">Jan 1 2015</time>
+      <a href="/2015/02/02/notes/Layer 中自定义属性的动画/" class="article-date">
+  	<time datetime="2015-02-02T15:44:14.000Z" itemprop="datePublished">Feb 2 2015</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+    <a class="article-category-link" href="/categories/notes/">notes</a>
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 
     </div>
   
@@ -140,7 +140,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/">影响Viewcontroller展示的一些属性</a>
+      <a class="article-title" href="/2015/02/02/notes/Layer 中自定义属性的动画/">layer 动画解释笔记</a>
     </h1>
   
 
@@ -148,13 +148,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在适配 iOS7 之前的 view 的时候，我们写过这样的代码</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">self</span><span class="built_in">.</span>automaticallyAdjustsScrollViewInsets <span class="subst">=</span> <span class="literal">false</span></div><div class="line"><span class="built_in">self</span><span class="built_in">.</span>edgesForExtendedLayout <span class="subst">=</span> UIRectEdge<span class="built_in">.</span><span class="literal">None</span></div><div class="line"><span class="built_in">self</span><span class="built_in">.</span>extendedLayoutIncludesOpaqueBars <span class="subst">=</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
-
+        <p>一个个Layer通过tree的结构组织起来，在Display的过程中实际上有3种Layer tree。</p>
+<ol>
+<li><p>model layer tree (模型层树)</p>
+<blockquote>
+<p>我们通常意义说的Layer。当我们修改layer中的属性时，就会立刻修改model layer tree。</p>
+</blockquote>
+</li>
+<li><p>presentation tree (表示层树)</p>
+<blockquote>
+<p>Layer在屏幕中的真实位置，或者说在动画的过程中，layer 的位置</p>
+</blockquote>
+</li>
+<li><p>render tree (渲染树)</p>
+<blockquote>
+<p>apple的render server进程中，是真正处理动画的地方。而且线程的优先级也比我们主线程优先级高。所以有时候即使我们的App主线程busy，依然不会影响到手机屏幕的绘制工作</p>
+</blockquote>
+</li>
+</ol>
 
         
           <p class="article-more-link">
-            <a href="/2015/01/01/iOS基础/影响Viewcontroller展示的一些属性/#more">阅读全文 >></a>
+            <a href="/2015/02/02/notes/Layer 中自定义属性的动画/#more">阅读全文 >></a>
           </p>
         
       

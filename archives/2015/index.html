@@ -51,6 +51,8 @@
 	        
 				<li><a href="/categories/ iOS基础">iOS基础</a></li>
 	        
+				<li><a href="/categories/notes">笔记</a></li>
+	        
 				<li><a href="/categories/第三方">第三方使用</a></li>
 	        
 			</ul>
@@ -93,6 +95,8 @@
 		        
 					<li><a href="/categories/ iOS基础">iOS基础</a></li>
 		        
+					<li><a href="/categories/notes">笔记</a></li>
+		        
 					<li><a href="/categories/第三方">第三方使用</a></li>
 		        
 		        <div class="clearfix"></div>
@@ -113,6 +117,76 @@
 	</div>
 </nav>
       
+  
+    <article id="post-notes/Layer 中自定义属性的动画" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/02/02/notes/Layer 中自定义属性的动画/" class="article-date">
+  	<time datetime="2015-02-02T15:44:14.000Z" itemprop="datePublished">Feb 2 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/notes/">notes</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/02/notes/Layer 中自定义属性的动画/">layer 动画解释笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一个个Layer通过tree的结构组织起来，在Display的过程中实际上有3种Layer tree。</p>
+<ol>
+<li><p>model layer tree (模型层树)</p>
+<blockquote>
+<p>我们通常意义说的Layer。当我们修改layer中的属性时，就会立刻修改model layer tree。</p>
+</blockquote>
+</li>
+<li><p>presentation tree (表示层树)</p>
+<blockquote>
+<p>Layer在屏幕中的真实位置，或者说在动画的过程中，layer 的位置</p>
+</blockquote>
+</li>
+<li><p>render tree (渲染树)</p>
+<blockquote>
+<p>apple的render server进程中，是真正处理动画的地方。而且线程的优先级也比我们主线程优先级高。所以有时候即使我们的App主线程busy，依然不会影响到手机屏幕的绘制工作</p>
+</blockquote>
+</li>
+</ol>
+
+        
+          <p class="article-more-link">
+            <a href="/2015/02/02/notes/Layer 中自定义属性的动画/#more">阅读全文 >></a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-iOS基础/iPhone适配Plus的一些思考（二）" class="article article-type-post" itemscope itemprop="blogPost">
   
