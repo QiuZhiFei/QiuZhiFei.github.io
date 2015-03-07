@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>对象归档 | 仇志飞的博客 | iOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="iOS, apple, 对象归档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对象归档">
+<meta property="og:url" content="http://yoursite.com/2015/03/07/iOS基础/对象归档/">
+<meta property="og:site_name" content="仇志飞的博客 | iOS">
+<meta property="og:description" content="iOS, apple, 对象归档">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="对象归档">
+<meta name="twitter:description" content="iOS, apple, 对象归档">
+
+  
+    <link rel="alternative" href="/atom.xml" title="仇志飞的博客 | iOS" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="http://zhifei.qiniudn.com/bb7a3a8a2f704f938058210d82d0bc17e1a3bdb3585d5-faSzte_fw658.png?imageView2/2/w/200/q/85">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">仇志飞</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我只想做个安静的 iOS 开发 ...</p>
+		
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+				<li><a href="/categories/iOS基础">iOS基础</a></li>
+	        
+				<li><a href="/categories/notes">笔记</a></li>
+	        
+				<li><a href="/categories/第三方">第三方使用</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/QiuZhiFei" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/qiuzhifei521" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+		        
+			</div>
+		</nav>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://zhifei.qiniudn.com/bb7a3a8a2f704f938058210d82d0bc17e1a3bdb3585d5-faSzte_fw658.png?imageView2/2/w/200/q/85">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">仇志飞</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我只想做个安静的 iOS 开发 ...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/categories/iOS基础">iOS基础</a></li>
+		        
+					<li><a href="/categories/notes">笔记</a></li>
+		        
+					<li><a href="/categories/第三方">第三方使用</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/QiuZhiFei" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/qiuzhifei521" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-iOS基础/对象归档" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/07/iOS基础/对象归档/" class="article-date">
+  	<time datetime="2015-03-07T10:34:14.000Z" itemprop="datePublished">Mar 7 2015</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+  </div>
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      对象归档
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对象归档是将对象归档以文件的形式保存到磁盘中(也称为序列化，持久化)，使用的时候读取该文件的保存路径读取文件的内容（也称为接档，反序列化）。<br>对象归档有两种方式：</p>
+<ol>
+<li>对foundation中对象进行归档, eg: NSString / NSArray …</li>
+<li>自定义对象归档</li>
+</ol>
+<a id="more"></a>
+
+
+<h1 id="简单对象归档">简单对象归档</h1>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">NString *homeDir = NSHomeDirectory();</div><div class="line">   <span class="built_in">NSString</span> *homePath = [homeDir stringByAppendingPathComponent:<span class="string">@"example.archiver"</span>];</div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"路径 == %@"</span>, homePath);</div><div class="line">   </div><div class="line">   <span class="built_in">NSArray</span> *arr = @[<span class="string">@"1"</span>, <span class="string">@"我们的"</span>];</div><div class="line">   <span class="keyword">if</span> ([NSKeyedArchiver archiveRootObject:arr toFile:homePath]) {</div><div class="line">       <span class="built_in">NSLog</span>(<span class="string">@"归档成功"</span>);</div><div class="line">   }</div><div class="line">   </div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"读取归档 == %@"</span>, [NSKeyedUnarchiver unarchiveObjectWithFile:homePath]);</div><div class="line">   </div><div class="line">   NSData *content = [NSData dataWithContentsOfFile:homePath];</div><div class="line">   </div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"读取文档 == %@"</span>, [NSKeyedUnarchiver unarchiveObjectWithData:content]);</div></pre></td></tr></table></figure>
+
+<h1 id="自定义内容归档">自定义内容归档</h1>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">NSString *<span class="variable">homeDir =</span> NSHomeDirectory();</div><div class="line">    NSString *<span class="variable">homePath =</span> [homeDir stringByAppendingPathComponent:@<span class="string">"example.archiver"</span>];</div><div class="line">    NSLog(@<span class="string">"路径 == %@"</span>, homePath);</div><div class="line">    </div><div class="line">    NSMutableData *<span class="variable">data =</span> [[NSMutableData alloc] init];</div><div class="line">    NSKeyedArchiver *<span class="variable">archiver =</span> [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];</div><div class="line">    [archiver encodeObject:@<span class="string">"zhifei"</span> forKey:@<span class="string">"name"</span>];</div><div class="line">    [archiver encodeFloat:<span class="number">1</span>.f forKey:@<span class="string">"float"</span>];</div><div class="line">    [archiver finishEncoding];</div><div class="line">    [data writeToFile:homePath atomically:YES];</div><div class="line">    </div><div class="line">    NSData *<span class="variable">content =</span> [NSData dataWithContentsOfFile:homePath];</div><div class="line">    NSKeyedUnarchiver *<span class="variable">unarchkver =</span> [[NSKeyedUnarchiver alloc] initForReadingWithData:content];</div><div class="line">    NSString *<span class="variable">name =</span> [unarchkver decodeObjectForKey:@<span class="string">"name"</span>];</div><div class="line">    NSLog(@<span class="string">"name == %@"</span>, name);</div></pre></td></tr></table></figure>
+
+<h1 id="自定义对象">自定义对象</h1>
+<p>实现 NSCoding 协议</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> <span class="preprocessor">#pragma mark - NSCoding</span></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)encodeWithCoder:(NSCoder *)aCoder</div><div class="line">{</div><div class="line">    [aCoder encodeObject:<span class="keyword">self</span><span class="variable">.name</span> forKey:<span class="string">@"name"</span>];</div><div class="line">    [aCoder encodeFloat:<span class="keyword">self</span><span class="variable">.age</span> forKey:<span class="string">@"age"</span>];</div><div class="line">}</div><div class="line"></div><div class="line">- (<span class="keyword">id</span>)initWithCoder:(NSCoder *)aDecoder</div><div class="line">{</div><div class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) {</div><div class="line">        <span class="keyword">self</span><span class="variable">.name</span> = [aDecoder decodeObjectForKey:<span class="string">@"name"</span>];</div><div class="line">        <span class="keyword">self</span><span class="variable">.age</span> = [aDecoder decodeFloatForKey:<span class="string">@"age"</span>];</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>归档</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">NSString *<span class="variable">homeDir =</span> NSHomeDirectory();</div><div class="line">    NSString *<span class="variable">homePath =</span> [homeDir stringByAppendingPathComponent:@<span class="string">"example.archiver"</span>];</div><div class="line">    NSLog(@<span class="string">"路径 == %@"</span>, homePath);</div><div class="line">    </div><div class="line">    Student *<span class="variable">stu =</span> [[Student alloc] init];</div><div class="line">    stu.<span class="variable">name =</span> @<span class="string">"zhifei"</span>;</div><div class="line">    stu.<span class="variable">age =</span> <span class="number">1</span>.f;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> ([NSKeyedArchiver archiveRootObject:stu toFile:homePath]) {</div><div class="line">        NSLog(@<span class="string">"归档成功"</span>);</div><div class="line">    }</div><div class="line">    </div><div class="line">    Student *<span class="variable">contentObj =</span> [NSKeyedUnarchiver unarchiveObjectWithFile:homePath];</div><div class="line">    NSLog(@<span class="string">"name == %@"</span>, contentObj.name);</div></pre></td></tr></table></figure>
+
+<h1 id="参考">参考</h1>
+<ol>
+<li><a href="http://blog.csdn.net/mad1989/article/details/9106475" target="_blank" rel="external">http://blog.csdn.net/mad1989/article/details/9106475</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_7124765801015imx.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_7124765801015imx.html</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/02/03/iOS基础/Objective-C是不是动态语言/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Objective-C是不是动态语言</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="iOS基础/对象归档" data-title="对象归档" data-url="http://yoursite.com/2015/03/07/iOS基础/对象归档/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"qiuzhifei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 仇志飞
+    	</div>
+      	<div class="footer-right">
+        
+
+          啦拉拉 ~ 
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
