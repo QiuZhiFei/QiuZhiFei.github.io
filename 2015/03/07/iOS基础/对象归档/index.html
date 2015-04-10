@@ -155,7 +155,7 @@
 
 <p><a href="https://github.com/QiuZhiFei/archiver/tree/master" target="_blank" rel="external">demo 地址</a></p>
 <h1 id="简单对象归档">简单对象归档</h1>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">NString *homeDir = NSHomeDirectory();</div><div class="line">   <span class="built_in">NSString</span> *homePath = [homeDir stringByAppendingPathComponent:<span class="string">@"example.archiver"</span>];</div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"路径 == %@"</span>, homePath);</div><div class="line">   </div><div class="line">   <span class="built_in">NSArray</span> *arr = @[<span class="string">@"1"</span>, <span class="string">@"我们的"</span>];</div><div class="line">   <span class="keyword">if</span> ([NSKeyedArchiver archiveRootObject:arr toFile:homePath]) {</div><div class="line">       <span class="built_in">NSLog</span>(<span class="string">@"归档成功"</span>);</div><div class="line">   }</div><div class="line">   </div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"读取归档 == %@"</span>, [NSKeyedUnarchiver unarchiveObjectWithFile:homePath]);</div><div class="line">   </div><div class="line">   NSData *content = [NSData dataWithContentsOfFile:homePath];</div><div class="line">   </div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"读取文档 == %@"</span>, [NSKeyedUnarchiver unarchiveObjectWithData:content]);</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">	</div></pre></td></tr></table></figure>
 
 <h1 id="自定义内容归档">自定义内容归档</h1>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">NSString *<span class="variable">homeDir =</span> NSHomeDirectory();</div><div class="line">    NSString *<span class="variable">homePath =</span> [homeDir stringByAppendingPathComponent:@<span class="string">"example.archiver"</span>];</div><div class="line">    NSLog(@<span class="string">"路径 == %@"</span>, homePath);</div><div class="line">    </div><div class="line">    NSMutableData *<span class="variable">data =</span> [[NSMutableData alloc] init];</div><div class="line">    NSKeyedArchiver *<span class="variable">archiver =</span> [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];</div><div class="line">    [archiver encodeObject:@<span class="string">"zhifei"</span> forKey:@<span class="string">"name"</span>];</div><div class="line">    [archiver encodeFloat:<span class="number">1</span>.f forKey:@<span class="string">"float"</span>];</div><div class="line">    [archiver finishEncoding];</div><div class="line">    [data writeToFile:homePath atomically:YES];</div><div class="line">    </div><div class="line">    NSData *<span class="variable">content =</span> [NSData dataWithContentsOfFile:homePath];</div><div class="line">    NSKeyedUnarchiver *<span class="variable">unarchkver =</span> [[NSKeyedUnarchiver alloc] initForReadingWithData:content];</div><div class="line">    NSString *<span class="variable">name =</span> [unarchkver decodeObjectForKey:@<span class="string">"name"</span>];</div><div class="line">    NSLog(@<span class="string">"name == %@"</span>, name);</div></pre></td></tr></table></figure>
@@ -184,6 +184,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/04/10/iOS基础/模拟网络状态/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          模拟网络状态
+        
+      </div>
+    </a>
   
   
     <a href="/2015/02/03/iOS基础/Objective-C是不是动态语言/" id="article-nav-older" class="article-nav-link-wrap">
