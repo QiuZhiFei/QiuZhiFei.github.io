@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>模拟网络状态 | 仇志飞的博客 | iOS</title>
+  <title>http协议在iOS中的一些使用 | 仇志飞的博客 | iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS, apple, 模拟网络状态">
+  <meta name="description" content="iOS, apple, http 协议, User Agent">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模拟网络状态">
-<meta property="og:url" content="http://yoursite.com/2015/04/10/iOS基础/模拟网络状态/">
+<meta property="og:title" content="http协议在iOS中的一些使用">
+<meta property="og:url" content="http://yoursite.com/2015/07/02/http/http协议在iOS中的一些使用/">
 <meta property="og:site_name" content="仇志飞的博客 | iOS">
-<meta property="og:description" content="iOS, apple, 模拟网络状态">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_1.png">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_2.png">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_3.png">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_4.png">
+<meta property="og:description" content="iOS, apple, http 协议, User Agent">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模拟网络状态">
-<meta name="twitter:description" content="iOS, apple, 模拟网络状态">
+<meta name="twitter:title" content="http协议在iOS中的一些使用">
+<meta name="twitter:description" content="iOS, apple, http 协议, User Agent">
 
   
     <link rel="alternative" href="/atom.xml" title="仇志飞的博客 | iOS" type="application/atom+xml">
@@ -124,19 +120,19 @@
 		</header>				
 	</div>
 </nav>
-      <article id="post-iOS基础/模拟网络状态" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-http/http协议在iOS中的一些使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/04/10/iOS基础/模拟网络状态/" class="article-date">
-  	<time datetime="2015-04-10T10:34:14.000Z" itemprop="datePublished">Apr 10 2015</time>
+      <a href="/2015/07/02/http/http协议在iOS中的一些使用/" class="article-date">
+  	<time datetime="2015-07-02T10:34:14.000Z" itemprop="datePublished">Jul 2 2015</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+    <a class="article-category-link" href="/categories/http协议/">http协议</a>
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http协议/">http协议</a></li></ul>
 
     </div>
   
@@ -146,7 +142,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      模拟网络状态
+      http协议在iOS中的一些使用
     </h1>
   
 
@@ -154,34 +150,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用xcode 自带的工具，模拟网络状态</p>
+        <p>http协议在 iOS 中的一些使用</p>
 <a id="more"></a>
 
-<h1 id="下载">下载</h1>
-<ol>
-<li>通过Xcode中的[Xcode]→[Open Developer Tool]→[More Developer Tools…]菜单项，打开下载页面。</li>
-</ol>
-<p><img src="http://zhifei.qiniudn.com/net_1.png" alt=""></p>
-<ol>
-<li>会进到 <a href="https://developer.apple.com/downloads/index.action?q=Network%20Link%20Conditioner" target="_blank" rel="external">https://developer.apple.com/downloads/index.action?q=Network%20Link%20Conditioner</a></li>
-</ol>
-<p><img src="http://zhifei.qiniudn.com/net_2.png" alt=""></p>
-<p>下载并安装</p>
-<ol>
-<li>安装成功后会在“系统偏好设置”中看到Network Link Conditioner的图标。</li>
-</ol>
-<p><img src="http://zhifei.qiniudn.com/net_3.png" alt=""></p>
-<h1 id="使用">使用</h1>
-<p>点击使用</p>
-<p><img src="http://zhifei.qiniudn.com/net_4.png" alt=""></p>
-<p>off/on 控制开关<br>profile 选择状态<br>manage profiles 添加自定义的状态 </p>
-<blockquote>
-<p>注意：因为网速限制是对全系统有效。</p>
-</blockquote>
-<h1 id="参考">参考</h1>
-<ol>
-<li><a href="http://blog.imwangwei.cn/?p=130" target="_blank" rel="external">http://blog.imwangwei.cn/?p=130</a></li>
-</ol>
+
+<h1 id="webview_请求设置全局_UserAgent">webview 请求设置全局 UserAgent</h1>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// set user-agent</span></div><div class="line">    <span class="comment">// 注册默认设置</span></div><div class="line">    <span class="built_in">NSString</span> * userAgent = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@/%@ (%@; iOS %@; Scale/%0.2f)"</span>, [[[<span class="built_in">NSBundle</span> mainBundle] infoDictionary] objectForKey:(__bridge <span class="built_in">NSString</span> *)kCFBundleExecutableKey] ?: [[[<span class="built_in">NSBundle</span> mainBundle] infoDictionary] objectForKey:(__bridge <span class="built_in">NSString</span> *)kCFBundleIdentifierKey], (__bridge <span class="keyword">id</span>)CFBundleGetValueForInfoDictionaryKey(CFBundleGetMainBundle(), kCFBundleVersionKey) ?: [[[<span class="built_in">NSBundle</span> mainBundle] infoDictionary] objectForKey:(__bridge <span class="built_in">NSString</span> *)kCFBundleVersionKey], [[UIDevice currentDevice] model], [[UIDevice currentDevice] systemVersion], [[UIScreen mainScreen] scale]];</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="built_in">NSDictionary</span> *dictionary = [<span class="built_in">NSDictionary</span> dictionaryWithObjectsAndKeys:userAgent, <span class="string">@"UserAgent"</span>, <span class="literal">nil</span>];</div><div class="line">    [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] registerDefaults:dictionary];</div></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -194,18 +169,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/07/02/http/http协议在iOS中的一些使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          http协议在iOS中的一些使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/07/iOS基础/对象归档/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">对象归档</div>
+    <a href="/2015/04/10/iOS基础/模拟网络状态/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模拟网络状态</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -234,7 +200,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="iOS基础/模拟网络状态" data-title="模拟网络状态" data-url="http://yoursite.com/2015/04/10/iOS基础/模拟网络状态/"></div>
+	<div class="ds-thread" data-thread-key="http/http协议在iOS中的一些使用" data-title="http协议在iOS中的一些使用" data-url="http://yoursite.com/2015/07/02/http/http协议在iOS中的一些使用/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
