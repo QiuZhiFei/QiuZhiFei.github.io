@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>模拟网络状态 | 仇志飞的博客 | iOS</title>
+  <title>Swift与OC混合开发 | 仇志飞的博客 | iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS, apple, 模拟网络状态">
+  <meta name="description" content="Swift, OC, 混合, cocoapods">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模拟网络状态">
-<meta property="og:url" content="http://yoursite.com/2015/04/10/iOS基础/模拟网络状态/">
+<meta property="og:title" content="Swift与OC混合开发">
+<meta property="og:url" content="http://yoursite.com/2015/08/04/Swift/Swift与OC混合开发/">
 <meta property="og:site_name" content="仇志飞的博客 | iOS">
-<meta property="og:description" content="iOS, apple, 模拟网络状态">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_1.png">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_2.png">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_3.png">
-<meta property="og:image" content="http://zhifei.qiniudn.com/net_4.png">
+<meta property="og:description" content="Swift, OC, 混合, cocoapods">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模拟网络状态">
-<meta name="twitter:description" content="iOS, apple, 模拟网络状态">
+<meta name="twitter:title" content="Swift与OC混合开发">
+<meta name="twitter:description" content="Swift, OC, 混合, cocoapods">
 
   
     <link rel="alternative" href="/atom.xml" title="仇志飞的博客 | iOS" type="application/atom+xml">
@@ -128,19 +124,19 @@
 		</header>				
 	</div>
 </nav>
-      <article id="post-iOS基础/模拟网络状态" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-Swift/Swift与OC混合开发" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/04/10/iOS基础/模拟网络状态/" class="article-date">
-  	<time datetime="2015-04-10T10:34:14.000Z" itemprop="datePublished">Apr 10 2015</time>
+      <a href="/2015/08/04/Swift/Swift与OC混合开发/" class="article-date">
+  	<time datetime="2015-08-04T10:34:14.000Z" itemprop="datePublished">Aug 4 2015</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS基础/">iOS基础</a>
+    <a class="article-category-link" href="/categories/Swift/">Swift</a>
   </div>
 
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS基础/">iOS基础</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li></ul>
 
     </div>
   
@@ -150,7 +146,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      模拟网络状态
+      Swift与OC混合开发
     </h1>
   
 
@@ -158,33 +154,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用xcode 自带的工具，模拟网络状态</p>
+        <h1 id="测试环境">测试环境</h1>
+<ol>
+<li>Xcode7 beta4</li>
+<li>cocoapods 0.37.2</li>
+</ol>
 <a id="more"></a>
 
-<h1 id="下载">下载</h1>
+<hr>
+<h1 id="OC_工程使用_Swift_|_Swift_使用_OC">OC 工程使用 Swift  | Swift 使用 OC</h1>
 <ol>
-<li>通过Xcode中的[Xcode]→[Open Developer Tool]→[More Developer Tools…]菜单项，打开下载页面。</li>
-</ol>
-<p><img src="http://zhifei.qiniudn.com/net_1.png" alt=""></p>
+<li>OC文件引用Swift，#import “target name-Swift.h” <blockquote>
 <ol>
-<li>会进到 <a href="https://developer.apple.com/downloads/index.action?q=Network%20Link%20Conditioner" target="_blank" rel="external">https://developer.apple.com/downloads/index.action?q=Network%20Link%20Conditioner</a></li>
+<li>eg #import “OC_Swift-Swift.h” ，可查看 build settings -&gt; Objective-C Generated interface Header Name</li>
 </ol>
-<p><img src="http://zhifei.qiniudn.com/net_2.png" alt=""></p>
-<p>下载并安装</p>
-<ol>
-<li>安装成功后会在“系统偏好设置”中看到Network Link Conditioner的图标。</li>
-</ol>
-<p><img src="http://zhifei.qiniudn.com/net_3.png" alt=""></p>
-<h1 id="使用">使用</h1>
-<p>点击使用</p>
-<p><img src="http://zhifei.qiniudn.com/net_4.png" alt=""></p>
-<p>off/on 控制开关<br>profile 选择状态<br>manage profiles 添加自定义的状态 </p>
-<blockquote>
-<p>注意：因为网速限制是对全系统有效。</p>
 </blockquote>
+</li>
+<li>Swift文件引用OC，添加 arget name-Bridging-Header.h 头文件， 路径写在 build settings -&gt; Objective-C Bridging Header</li>
+</ol>
+<p>注：<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID122" target="_blank" rel="external">https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID122</a> 显示swift类，不是继承自 NSObject，需 @objc() 声明，但是 Xcode7 beta4 以后显示错误</p>
+<hr>
+<h1 id="使用_cocoapods_依赖混合开发">使用 cocoapods 依赖混合开发</h1>
+<p><strong>cocoapods</strong></p>
+<ol>
+<li>创建 Cocoa Touch Framework，语言 Swift</li>
+<li>Swift文件引用OC, build phases -&gt; headers，oc 文件选为 public，然后在 target.h 里文件里引用</li>
+<li>OC 引用 Swift，应用头文件 #import <mixframework mixframework-swift.h=""></mixframework></li>
+</ol>
+<p><strong>使用</strong></p>
+<ol>
+<li>Podfile 中使用 use_frameworks!</li>
+<li>调用 Swift. #import <mixframework mixframework-swift.h=""> </mixframework></li>
+<li>调用 OC, #import “MM.h”</li>
+</ol>
+<hr>
+<h1 id="Demo">Demo</h1>
+<ol>
+<li><a href="https://github.com/QiuZhiFei/MixKit/tree/master" target="_blank" rel="external">https://github.com/QiuZhiFei/MixKit/tree/master</a></li>
+</ol>
+<hr>
 <h1 id="参考">参考</h1>
 <ol>
-<li><a href="http://blog.imwangwei.cn/?p=130" target="_blank" rel="external">http://blog.imwangwei.cn/?p=130</a></li>
+<li><a href="http://blog.cocoapods.org/CocoaPods-0.36/" target="_blank" rel="external"> http://blog.cocoapods.org/CocoaPods-0.36/</a></li>
+<li><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID122" target="_blank" rel="external">https://developer.apple.com</a></li>
 </ol>
 
       
@@ -198,18 +210,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/07/02/http/http协议在iOS中的一些使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          http协议在iOS中的一些使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/03/07/iOS基础/对象归档/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">对象归档</div>
+    <a href="/2015/07/02/http/http协议在iOS中的一些使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">http协议在iOS中的一些使用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -238,7 +241,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="iOS基础/模拟网络状态" data-title="模拟网络状态" data-url="http://yoursite.com/2015/04/10/iOS基础/模拟网络状态/"></div>
+	<div class="ds-thread" data-thread-key="Swift/Swift与OC混合开发" data-title="Swift与OC混合开发" data-url="http://yoursite.com/2015/08/04/Swift/Swift与OC混合开发/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
