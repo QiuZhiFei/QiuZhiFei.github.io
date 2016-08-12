@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>
     
-  雅舍一人
+  读书 - 雅舍一人
   
 
   </title>
@@ -90,30 +90,6 @@ $(document).ready(function(event) {
 		  	
 		  	<p>1 健康<br/>
 2 不破坏食材 【煎炒炸都会破坏】</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="14709034168102.html">Repeat animation forever in Swift (HUGE_VALF)?</a></h1>
-			<p class="meta"><time datetime="2016-08-11T16:16:56+08:00" 
-			pubdate data-updated="true">2016/8/11</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<pre><code>Set the repeatCount to Float.infinity. This compiles and works.
-</code></pre>
-
-<p>In all probability, HUGE_VALF was a legacy value in any case.</p>
-
-<p>Still, it&#39;s a bit of a surprise that these numeric constant names are not seen by Swift. I did try importing <stdlib.h> in the bridging header but it didn&#39;t help.</p>
-
-<p>参考 <a href="http://stackoverflow.com/a/24343909/3548428">http://stackoverflow.com/a/24343909/3548428</a></p>
 
 
 		</div>
@@ -249,108 +225,6 @@ $(document).ready(function(event) {
  
 	<article>
 		 <header>
-		  	<h1 class="entry-title"><a href="14708038438440.html">Defer</a></h1>
-			<p class="meta"><time datetime="2016-08-10T12:37:23+08:00" 
-			pubdate data-updated="true">2016/8/10</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p><a href="http://nshipster.cn/guard-and-defer/">http://nshipster.cn/guard-and-defer/</a></p>
-
-<p><a href="http://www.jianshu.com/p/eb718439551f">http://www.jianshu.com/p/eb718439551f</a></p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="14708028210913.html">Allow didSet to be called during initialization in swift</a></h1>
-			<p class="meta"><time datetime="2016-08-10T12:20:21+08:00" 
-			pubdate data-updated="true">2016/8/10</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<pre><code class="language-Swift">
-class Classy {
-
-    var foo: Int! { didSet { doStuff() } }
-
-    init( foo: Int ) {
-        // closure invokes didSet
-        ({ self.foo = foo })()
-    }
-
-}
-
-</code></pre>
-
-<p>参考 <a href="http://stackoverflow.com/a/29501998/3548428">http://stackoverflow.com/a/29501998/3548428</a></p>
-
-<pre><code class="language-Swift">class SomeClass {
-    var someProperty: AnyObject! {
-        didSet {
-            //do some Stuff
-        }
-    }
-
-    init(someProperty: AnyObject) {
-        setSomeProperty(someProperty)
-    }
-
-    func setSomeProperty(newValue:AnyObject) {
-        self.someProperty = newValue
-    }
-}
-</code></pre>
-
-<p>参考 <a href="http://stackoverflow.com/a/25231068/3548428">http://stackoverflow.com/a/25231068/3548428</a></p>
-
-<pre><code class="language-Swift">public class MyNewType : NSObject {
-    public var myRequiredField:Int
-    public var myOptionalField:Float? {
-        willSet {
-            if let newValue = newValue {
-                print(&quot;I&#39;m going to change to \(newValue)&quot;)
-            }
-        }
-        didSet {
-            if let myOptionalField = self.myOptionalField {
-                print(&quot;Now I&#39;m \(myOptionalField)&quot;)
-            }
-        }
-    }
-
-    override public init() {
-        self.myRequiredField = 1
-
-        super.init()
-
-        // Non-defered
-        self.myOptionalField = 6.28
-
-        // Defered
-        defer {
-            self.myOptionalField = 3.14
-        }
-    }
-}
-</code></pre>
-
-<p>参考  <a href="http://stackoverflow.com/a/33979852/3548428">http://stackoverflow.com/a/33979852/3548428</a></p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
 		  	<h1 class="entry-title"><a href="14707410948943.html">情人节</a></h1>
 			<p class="meta"><time datetime="2016-08-09T19:11:34+08:00" 
 			pubdate data-updated="true">2016/8/9</time></p>
@@ -365,9 +239,94 @@ class Classy {
 		
 
 	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14706201827397.html"></a></h1>
+			<p class="meta"><time datetime="2016-08-08T09:36:22+08:00" 
+			pubdate data-updated="true">2016/8/8</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>看了两天直播，女孩儿都挺漂亮的，皮肤白，身材俏，可他们当真如人所说『色情、低俗』么？我看不尽然，首先态度很端正，一天直播几个小时、甚至十几个小时，ta们确实当成了事业来做；其次有才艺，『说学逗唱，会要钱』这都是街头艺人的营生，无师自通，可见聪慧；</p>
+
+<p>直播对传统道德的冲击，希望我们的社会更开明。</p>
+
+<p>我们已经是第二大经济体了，多元化的必然，</p>
+
+<p>女孩儿露露胸、穿着单薄，无伤大雅，</p>
+
+<p>若是出几个苍老师这样『德艺双馨』的艺术家，岂不好事？</p>
+
+<p>直播的女孩儿漂亮，皮肤白，身材俏。一天直播几个小时、十几个小时，态度端正，确实把直播当成事业来做。『说学逗唱，会要钱』这都是街头艺人的营生，无师自通，可见其聪慧。说什么『色情、低俗』，我们已经是第二大经济体了，多元化的必然，女孩儿露露胸、穿着单薄，自个儿自由，无伤大雅。若是出几个苍老师这样『德艺双馨』的艺术家，岂不好事？</p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14705846989825.html">哲学名词</a></h1>
+			<p class="meta"><time datetime="2016-08-07T23:44:58+08:00" 
+			pubdate data-updated="true">2016/8/7</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<h2 id="toc_0">自然主义</h2>
+
+<p>综合唯物主义与实用主义，不研究超自然现象的哲学立场，理论基础认为所有的现象都可以用自然理由的概念解释。</p>
+
+<h6 id="toc_1">参考</h6>
+
+<blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E4%B8%BB%E4%B9%89#cite_note-draper-8">https://zh.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E4%B8%BB%E4%B9%89#cite_note-draper-8</a></p>
+</blockquote>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14705833159740.html">近代哲学的精神</a></h1>
+			<p class="meta"><time datetime="2016-08-07T23:21:55+08:00" 
+			pubdate data-updated="true">2016/8/7</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>思考精神觉醒，批评活跃，反抗权威和传统，反对专制主义和集权主义，要求思想、感情和行动自由。</p>
+
+<h2 id="toc_0">文化领域</h2>
+
+<p><strong>反对控制，要求自由。理性成了科学和哲学中的权威。</strong></p>
+
+<pre><code>中国素来讲究德行、修身，是感性的社会。时下的社会矛盾，是感性与理性的抗争？
+
+</code></pre>
+
+<p>真理不是权威传给后世或教皇的敕令颁布的，而是由不偏不倚的自由研究获得的。</p>
+
+<p>注意力从探索超自然的事物转到研究自然事物，从天上转到人间，神学把王冠让给了科学与哲学。</p>
+
+<p><strong>人们用自然的原来来解释物质和精神世界，解释社会、人类制度和宗教本身。</strong></p>
+
+<p>重视和渴求知识，不是为其自身，而是为实用。为其实际价值，知识就是力量。</p>
+
+
+		</div>
+
+		
+
+	</article>
   
 	<div class="pagination">
-	 <a class="prev" href="all_1.html">&larr; Older</a> 
+	
 <a href="archives.html">Blog Archives</a>
 	 
 	    
