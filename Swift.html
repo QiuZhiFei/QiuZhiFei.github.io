@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>
     
-  信仰 - 雅舍一人
+  Swift - 雅舍一人
   
 
   </title>
@@ -78,83 +78,181 @@ $(document).ready(function(event) {
 </nav>
   <div id="main">
     <div id="content"> 
-<div>
-	<article class="hentry" role="article">
-	<header>
-			  	<h1 class="entry-title">信仰</h1>
-				<p class="meta"><time datetime="2016-08-11T12:25:47+08:00" pubdate data-updated="true">2016/8/11</time></p>
-			 </header>
-		  	<div class="entry-content">
-			  	<p>有信仰的人，有敬畏。有敬畏，有自省、自律。</p>
+<div class="blog-index">
 
-<p>没有信仰，就容易他醒、他怨、不满、暴力，希望改变</p>
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14713177673028.html">可选类型</a></h1>
+			<p class="meta"><time datetime="2016-08-16T11:22:47+08:00" 
+			pubdate data-updated="true">2016/8/16</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>没有初始值就是可选</p>
 
-			</div>
+<p>初始化时一定有值，是 隐性可选<br/>
+初始化时不一定有值，是 显性可选</p>
 
-		
-	  
-		<footer>
-		 <p class="meta">
-
-			<strong>Categories:</strong>&nbsp; 
-			<span class="categories">
-			
-			    <a class='category' href='%E5%93%B2%E5%AD%A6.html'>哲学</a>&nbsp;
-			 
-			</span>
-		    </p>
-		    <p class="meta">
-		      
-		 </p>
-	    
-		<div class="sharing">
-		  <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_32x32">
-	<a class="jiathis_button_qzone"></a>
-	<a class="jiathis_button_tsina"></a>
-	<a class="jiathis_button_tqq"></a>
-	<a class="jiathis_button_weixin"></a>
-	<a class="jiathis_button_renren"></a>
-	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-<!-- 多说评论框 start -->
-	<div class="ds-thread"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"qiuzhifeiblog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-          
-
-          
 
 		</div>
 
-	    <p class="meta">
-	    
-	        <a class="basic-alignment left" href="14709009267795.html" 
-	        title="Previous Post: ">&laquo; </a>
-	    
-	    
-	        <a class="basic-alignment right" href="14708847184916.html" 
-	        title="Next Post: 七宗罪">七宗罪 &raquo;</a>
-	    
-	    </p>
-	  </footer>
+		
+
 	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14709034168102.html">Repeat animation forever in Swift (HUGE_VALF)?</a></h1>
+			<p class="meta"><time datetime="2016-08-11T16:16:56+08:00" 
+			pubdate data-updated="true">2016/8/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<pre><code>Set the repeatCount to Float.infinity. This compiles and works.
+</code></pre>
+
+<p>In all probability, HUGE_VALF was a legacy value in any case.</p>
+
+<p>Still, it&#39;s a bit of a surprise that these numeric constant names are not seen by Swift. I did try importing <stdlib.h> in the bridging header but it didn&#39;t help.</p>
+
+<p>参考 <a href="http://stackoverflow.com/a/24343909/3548428">http://stackoverflow.com/a/24343909/3548428</a></p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708038438440.html">Defer</a></h1>
+			<p class="meta"><time datetime="2016-08-10T12:37:23+08:00" 
+			pubdate data-updated="true">2016/8/10</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p><a href="http://nshipster.cn/guard-and-defer/">http://nshipster.cn/guard-and-defer/</a></p>
+
+<p><a href="http://www.jianshu.com/p/eb718439551f">http://www.jianshu.com/p/eb718439551f</a></p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708028210913.html">Allow didSet to be called during initialization in swift</a></h1>
+			<p class="meta"><time datetime="2016-08-10T12:20:21+08:00" 
+			pubdate data-updated="true">2016/8/10</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<pre><code class="language-Swift">
+class Classy {
+
+    var foo: Int! { didSet { doStuff() } }
+
+    init( foo: Int ) {
+        // closure invokes didSet
+        ({ self.foo = foo })()
+    }
+
+}
+
+</code></pre>
+
+<p>参考 <a href="http://stackoverflow.com/a/29501998/3548428">http://stackoverflow.com/a/29501998/3548428</a></p>
+
+<pre><code class="language-Swift">class SomeClass {
+    var someProperty: AnyObject! {
+        didSet {
+            //do some Stuff
+        }
+    }
+
+    init(someProperty: AnyObject) {
+        setSomeProperty(someProperty)
+    }
+
+    func setSomeProperty(newValue:AnyObject) {
+        self.someProperty = newValue
+    }
+}
+</code></pre>
+
+<p>参考 <a href="http://stackoverflow.com/a/25231068/3548428">http://stackoverflow.com/a/25231068/3548428</a></p>
+
+<pre><code class="language-Swift">public class MyNewType : NSObject {
+    public var myRequiredField:Int
+    public var myOptionalField:Float? {
+        willSet {
+            if let newValue = newValue {
+                print(&quot;I&#39;m going to change to \(newValue)&quot;)
+            }
+        }
+        didSet {
+            if let myOptionalField = self.myOptionalField {
+                print(&quot;Now I&#39;m \(myOptionalField)&quot;)
+            }
+        }
+    }
+
+    override public init() {
+        self.myRequiredField = 1
+
+        super.init()
+
+        // Non-defered
+        self.myOptionalField = 6.28
+
+        // Defered
+        defer {
+            self.myOptionalField = 3.14
+        }
+    }
+}
+</code></pre>
+
+<p>参考  <a href="http://stackoverflow.com/a/33979852/3548428">http://stackoverflow.com/a/33979852/3548428</a></p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14707378940536.html">使用MWeb</a></h1>
+			<p class="meta"><time datetime="2016-08-09T18:18:14+08:00" 
+			pubdate data-updated="true">2016/8/9</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<h2 id="toc_0">参考</h2>
+
+<blockquote>
+<p><a href="http://coderforart.com/mweb-medium-like-theme.html">http://coderforart.com/mweb-medium-like-theme.html</a></p>
+</blockquote>
+
+
+		</div>
+
+		
+
+	</article>
+  
+	<div class="pagination">
+	
+<a href="archives.html">Blog Archives</a>
+	 
+	    
+	</div>
 </div>
  <aside class="sidebar"> 
 
