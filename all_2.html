@@ -82,6 +82,192 @@ $(document).ready(function(event) {
 
 	<article>
 		 <header>
+		  	<h1 class="entry-title"><a href="14708895471743.html">信仰</a></h1>
+			<p class="meta"><time datetime="2016-08-11T12:25:47+08:00" 
+			pubdate data-updated="true">2016/8/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>有信仰的人，有敬畏。有敬畏，有自省、自律。</p>
+
+<p>没有信仰，就容易他醒、他怨、不满、暴力，希望改变</p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708847184916.html">七宗罪</a></h1>
+			<p class="meta"><time datetime="2016-08-11T11:05:18+08:00" 
+			pubdate data-updated="true">2016/8/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>暴食、色欲、贪婪、暴怒、怠惰、伤悲、自负or傲慢</p>
+
+<h2 id="toc_0">起源</h2>
+
+<p>13世纪道明会神父圣多玛斯·阿奎纳列举出多种恶行的表现。<br/>
+天主教教义中提出『按若望格西安和宗教格里高利一世的见解，分辨出教徒常遇到的重大恶行』</p>
+
+<p>六世纪后期，教宗艾文略一世将那8种罪行来源减至7项，伤悲并归入懒惰，自负并入傲慢，并加入妒忌。他的排序准则在于对爱的违背程度。其顺次序为：傲慢、嫉妒、暴怒、懒惰、贪婪、色欲、暴食。</p>
+
+<h2 id="toc_1">参考</h2>
+
+<blockquote>
+<p><a href="http://baike.baidu.com/subview/22021/7627733.htm#viewPageContent">http://baike.baidu.com/subview/22021/7627733.htm#viewPageContent</a></p>
+</blockquote>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708835175876.html">底线</a></h1>
+			<p class="meta"><time datetime="2016-08-11T10:45:17+08:00" 
+			pubdate data-updated="true">2016/8/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>追求相当的时候，拼的是底线。<br/>
+底线由经济、教育、环境 等等关系</p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708830903290.html">增值服务</a></h1>
+			<p class="meta"><time datetime="2016-08-11T10:38:10+08:00" 
+			pubdate data-updated="true">2016/8/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>增值服务</p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708038438440.html">Defer</a></h1>
+			<p class="meta"><time datetime="2016-08-10T12:37:23+08:00" 
+			pubdate data-updated="true">2016/8/10</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p><a href="http://nshipster.cn/guard-and-defer/">http://nshipster.cn/guard-and-defer/</a></p>
+
+<p><a href="http://www.jianshu.com/p/eb718439551f">http://www.jianshu.com/p/eb718439551f</a></p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="14708028210913.html">Allow didSet to be called during initialization in swift</a></h1>
+			<p class="meta"><time datetime="2016-08-10T12:20:21+08:00" 
+			pubdate data-updated="true">2016/8/10</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<pre><code class="language-Swift">
+class Classy {
+
+    var foo: Int! { didSet { doStuff() } }
+
+    init( foo: Int ) {
+        // closure invokes didSet
+        ({ self.foo = foo })()
+    }
+
+}
+
+</code></pre>
+
+<p>参考 <a href="http://stackoverflow.com/a/29501998/3548428">http://stackoverflow.com/a/29501998/3548428</a></p>
+
+<pre><code class="language-Swift">class SomeClass {
+    var someProperty: AnyObject! {
+        didSet {
+            //do some Stuff
+        }
+    }
+
+    init(someProperty: AnyObject) {
+        setSomeProperty(someProperty)
+    }
+
+    func setSomeProperty(newValue:AnyObject) {
+        self.someProperty = newValue
+    }
+}
+</code></pre>
+
+<p>参考 <a href="http://stackoverflow.com/a/25231068/3548428">http://stackoverflow.com/a/25231068/3548428</a></p>
+
+<pre><code class="language-Swift">public class MyNewType : NSObject {
+    public var myRequiredField:Int
+    public var myOptionalField:Float? {
+        willSet {
+            if let newValue = newValue {
+                print(&quot;I&#39;m going to change to \(newValue)&quot;)
+            }
+        }
+        didSet {
+            if let myOptionalField = self.myOptionalField {
+                print(&quot;Now I&#39;m \(myOptionalField)&quot;)
+            }
+        }
+    }
+
+    override public init() {
+        self.myRequiredField = 1
+
+        super.init()
+
+        // Non-defered
+        self.myOptionalField = 6.28
+
+        // Defered
+        defer {
+            self.myOptionalField = 3.14
+        }
+    }
+}
+</code></pre>
+
+<p>参考  <a href="http://stackoverflow.com/a/33979852/3548428">http://stackoverflow.com/a/33979852/3548428</a></p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
 		  	<h1 class="entry-title"><a href="14707410948943.html">情人节</a></h1>
 			<p class="meta"><time datetime="2016-08-09T19:11:34+08:00" 
 			pubdate data-updated="true">2016/8/9</time></p>
@@ -169,42 +355,9 @@ $(document).ready(function(event) {
 		
 
 	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="14705833159740.html">近代哲学的精神</a></h1>
-			<p class="meta"><time datetime="2016-08-07T23:21:55+08:00" 
-			pubdate data-updated="true">2016/8/7</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>思考精神觉醒，批评活跃，反抗权威和传统，反对专制主义和集权主义，要求思想、感情和行动自由。</p>
-
-<h2 id="toc_0">文化领域</h2>
-
-<p><strong>反对控制，要求自由。理性成了科学和哲学中的权威。</strong></p>
-
-<pre><code>中国素来讲究德行、修身，是感性的社会。时下的社会矛盾，是感性与理性的抗争？
-
-</code></pre>
-
-<p>真理不是权威传给后世或教皇的敕令颁布的，而是由不偏不倚的自由研究获得的。</p>
-
-<p>注意力从探索超自然的事物转到研究自然事物，从天上转到人间，神学把王冠让给了科学与哲学。</p>
-
-<p><strong>人们用自然的原来来解释物质和精神世界，解释社会、人类制度和宗教本身。</strong></p>
-
-<p>重视和渴求知识，不是为其自身，而是为实用。为其实际价值，知识就是力量。</p>
-
-
-		</div>
-
-		
-
-	</article>
   
 	<div class="pagination">
-	
+	 <a class="prev" href="all_3.html">&larr; Older</a> 
 <a href="archives.html">Blog Archives</a>
 	 <a class="next" href="all_1.html">Newer &rarr;</a>  
 	    
@@ -226,12 +379,12 @@ $(document).ready(function(event) {
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E8%AF%BB%E4%B9%A6.html"><strong>读书&nbsp;(20)</strong></a>
+	        <a href="%E8%AF%BB%E4%B9%A6.html"><strong>读书&nbsp;(26)</strong></a>
 	         <p class="cat-children-p"> 
 	        
-	        	<a href="%E6%BC%AB%E8%B0%88.html">漫谈&nbsp;(5)</a>&nbsp;&nbsp;
+	        	<a href="%E6%BC%AB%E8%B0%88.html">漫谈&nbsp;(10)</a>&nbsp;&nbsp;
 	        
-	        	<a href="%E5%93%B2%E5%AD%A6.html">哲学&nbsp;(6)</a>&nbsp;&nbsp;
+	        	<a href="%E5%93%B2%E5%AD%A6.html">哲学&nbsp;(7)</a>&nbsp;&nbsp;
 	        
 	        	<a href="%E5%95%86%E4%B8%9A.html">商业&nbsp;(3)</a>&nbsp;&nbsp;
 	        
@@ -250,31 +403,31 @@ $(document).ready(function(event) {
 	  
 	      
 		      <li class="post">
-		        <a href="14713339196766.html">历代经济变革得失</a>
+		        <a href="14715291156114.html">民意 - 自由何在？</a>
 		      </li>
 	     
 	  
 	      
 		      <li class="post">
-		        <a href="14713177673028.html">可选类型</a>
+		        <a href="14714849402034.html"></a>
 		      </li>
 	     
 	  
 	      
 		      <li class="post">
-		        <a href="14713155798871.html">科学</a>
+		        <a href="14714409307128.html">五经</a>
 		      </li>
 	     
 	  
 	      
 		      <li class="post">
-		        <a href="14713134845187.html">管理</a>
+		        <a href="14713993350082.html">SPA</a>
 		      </li>
 	     
 	  
 	      
 		      <li class="post">
-		        <a href="14712325260637.html">水浒传</a>
+		        <a href="14713514428350.html">我？</a>
 		      </li>
 	     
 	  
