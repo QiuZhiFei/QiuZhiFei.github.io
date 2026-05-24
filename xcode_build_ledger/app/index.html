@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — Xcode Build Ledger</title>
+  <meta name="description" content="Technical support for Xcode Build Ledger: setup, troubleshooting, and FAQ.">
+  <link rel="canonical" href="https://qiuzhifei.github.io/xcode_build_ledger/app/">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --bg: #ffffff;
+      --border: #d2d2d7;
+      --link: #0066cc;
+      --card: #f5f5f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f5f5f7;
+        --muted: #a1a1a6;
+        --bg: #000000;
+        --border: #424245;
+        --link: #2997ff;
+        --card: #1c1c1e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+    }
+    p, li { margin: 0 0 0.85rem; }
+    ul, ol { padding-left: 1.25rem; margin: 0 0 1rem; }
+    a { color: var(--link); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--card);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: var(--card);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin: 0 0 1rem;
+    }
+    pre code { background: none; padding: 0; }
+    .nav {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .nav a { margin-right: 1rem; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="nav" aria-label="Related pages">
+      <a href="../about/privacy/">Privacy Policy</a>
+    </nav>
+
+    <h1>Support</h1>
+    <p class="meta">
+      <strong>Xcode Build Ledger</strong><br>
+      macOS · Bundle ID <code>com.xcodyssey.app</code><br>
+      Local Xcode build time statistics
+    </p>
+
+    <p>
+      Xcode Build Ledger reads Xcode build activity logs on your Mac and shows daily waiting time,
+      trends, project rankings, and recent build records. Data stays on your device by default.
+      This page covers setup and common issues.
+    </p>
+
+    <h2>Getting started</h2>
+    <ol>
+      <li>Install <strong>Xcode Build Ledger</strong> from the Mac App Store.</li>
+      <li>Launch the app.</li>
+      <li>Open <strong>Settings</strong> (⌘,) from the sidebar footer.</li>
+      <li>Choose your <strong>DerivedData</strong> folder — typically:
+        <pre><code>~/Library/Developer/Xcode/DerivedData</code></pre>
+      </li>
+      <li>Return to the main window and run <strong>Scan</strong> / refresh if needed.</li>
+      <li>If you have recent Xcode builds, the dashboard fills with today’s stats, trends, and rankings.</li>
+    </ol>
+    <p>
+      The app uses <strong>App Sandbox</strong>. It only reads folders you explicitly select through
+      the macOS file picker and cannot browse your disk without permission.
+    </p>
+
+    <h2>System requirements</h2>
+    <ul>
+      <li><strong>macOS 13</strong> (Ventura) or later</li>
+      <li><strong>Xcode</strong> with build activity logs (`.xcactivitylog`) in DerivedData</li>
+      <li>No account or internet connection required for core features</li>
+    </ul>
+
+    <h2>Troubleshooting</h2>
+
+    <h3>Dashboard is empty after scanning</h3>
+    <ul>
+      <li>Confirm the selected folder is the correct <strong>DerivedData</strong> directory, not a single project subfolder.</li>
+      <li>Build at least once in Xcode so new <code>.xcactivitylog</code> files are created.</li>
+      <li>In Settings, check options such as ignoring very short preview builds if you expect only full builds to count.</li>
+      <li>Re-open Settings and re-select the folder if macOS revoked folder access after an update.</li>
+    </ul>
+
+    <h3>“Access denied” or folder no longer readable</h3>
+    <p>
+      Sandbox apps rely on security-scoped bookmarks. If access breaks, open Settings and choose
+      DerivedData again to restore permission.
+    </p>
+
+    <h3>Numbers look wrong or incomplete</h3>
+    <p>
+      Statistics are parsed from Xcode logs. Partial logs, parallel builds, or corrupted activity logs
+      can affect totals. The app distinguishes waiting time from raw per-build duration where possible;
+      see in-app <strong>Build insights</strong> for parse warnings.
+    </p>
+
+    <h3>App does not speed up builds</h3>
+    <p>
+      This is expected. Xcode Build Ledger is a <strong>measurement tool</strong> only. It does not
+      modify Xcode projects, schemes, or compiler settings.
+    </p>
+
+    <h2>FAQ</h2>
+
+    <h3>Is my data uploaded?</h3>
+    <p>
+      No. By default, logs, paths, project names, and aggregated statistics remain on your Mac.
+      See the <a href="../about/privacy/">Privacy Policy</a> for details.
+    </p>
+
+    <h3>Do I need an account?</h3>
+    <p>No. There is no sign-in.</p>
+
+    <h3>Is this an official Apple or Xcode product?</h3>
+    <p>
+      No. “Xcode” is a trademark of Apple Inc. This app is not affiliated with Apple. It only reads
+      standard Xcode build logs on your machine with your permission.
+    </p>
+
+    <h3>Which languages does the app support?</h3>
+    <p>
+      The Mac app supports multiple UI languages. You can change display language under
+      <strong>Settings → General</strong>.
+    </p>
+
+    <h3>Where is data stored?</h3>
+    <p>
+      Aggregated events are saved locally (for example <code>events.json</code> in the app data directory).
+      In App Store builds, data lives inside the app sandbox container. You can remove data by deleting
+      those files or uninstalling the app.
+    </p>
+
+    <h2>Related links</h2>
+    <ul>
+      <li><a href="../about/privacy/">Privacy Policy</a></li>
+    </ul>
+
+    <footer>
+      <p>© 2026 Zhifei Qiu. Xcode Build Ledger.</p>
+    </footer>
+  </main>
+</body>
+</html>
